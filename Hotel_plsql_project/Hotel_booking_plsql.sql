@@ -8,7 +8,7 @@ SET SERVEROUTPUT ON SIZE 1000000
 
 DECLARE
   -- ===========================================
-  -- 1. Record definition (Represents a booking)
+  -- 1. Record definition (Represents a booking) store different datatype in 1 variable 
   -- ===========================================
   TYPE booking_rec IS RECORD (
     booking_id   PLS_INTEGER,
@@ -19,13 +19,13 @@ DECLARE
   );
 
   -- ===========================================
-  -- 2. Nested table (Collection of records)
+  -- 2. Nested table (Collection of records) like a list hold multiple elements with same datatype 
   -- ===========================================
   TYPE booking_table IS TABLE OF booking_rec;
   bookings booking_table := booking_table();
 
   -- ===========================================
-  -- 3. Associative arrays for room data
+  -- 3. Associative arrays for room data   like a map 
   -- ===========================================
   TYPE rate_map IS TABLE OF NUMBER INDEX BY VARCHAR2(30);
   room_rate rate_map;
@@ -46,14 +46,14 @@ DECLARE
 
 BEGIN
   -- ===========================================
-  -- 5. Initialize room rates (Associative Array)
+  -- 5. Initialize room rates (Associative Array) mapping the room rate 
   -- ===========================================
   room_rate('Single') := 70000;
   room_rate('Double') := 120000;
   room_rate('Suite')  := 190000;
 
   -- ===========================================
-  -- 6. Load sample booking data (Nested Table)
+  -- 6. Load sample booking data (Nested Table) the list of booking records 
   -- ===========================================
   bookings.EXTEND(5);
   bookings(1) := booking_rec(1, 'Alice', 'Single', TO_DATE('2025-10-01','YYYY-MM-DD'), TO_DATE('2025-10-03','YYYY-MM-DD'));
