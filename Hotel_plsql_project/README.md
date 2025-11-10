@@ -45,7 +45,7 @@ Booking index 2 does not exist (as expected).
 
 ---
 
-## ⚙️ How to Run
+##  How to Run
 
 1. Open **Oracle SQL Developer** or **SQL*Plus**.  
 2. Run the command:
@@ -57,7 +57,7 @@ Booking index 2 does not exist (as expected).
 
 View the printed output in the “DBMS Output” panel.
 
-📘 Explanation of GOTO
+ Explanation of GOTO
 
 In this example, the GOTO statement skips any invalid booking entry where the check-out date is earlier than the check-in date.
 Example:
