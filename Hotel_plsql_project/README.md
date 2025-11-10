@@ -45,24 +45,4 @@ Booking index 2 does not exist (as expected).
 
 ---
 
-##  How to Run
-
-1. Open **Oracle SQL Developer** or **SQL*Plus**.  
-2. Run the command:
-
-   ```sql
-   SET SERVEROUTPUT ON SIZE 1000000
-   @hotel_booking_plsql.sql
-
-
-View the printed output in the “DBMS Output” panel.
-
- Explanation of GOTO
-
-In this example, the GOTO statement skips any invalid booking entry where the check-out date is earlier than the check-in date.
-Example:
-
-IF bookings(idx).check_out < bookings(idx).check_in THEN
-  GOTO SKIP_BOOKING;
-END IF;
 
