@@ -3,13 +3,10 @@
  Structure overview
 
 This block has four key sections:
-
-Declarations — define record types, collections, associative arrays, and variables.
-
-Initialization — set up rates and sample bookings.
-
-Processing logic — iterate, validate, aggregate, and use GOTO.
-
-Reporting — print summaries to DBMS_OUTPUT.
+---------------------------------
+1.Declarations — define record types, collections, associative arrays, and variables.
+2.Initialization — set up rates and sample bookings.
+3.Processing logic — iterate, validate, aggregate, and use GOTO.
+4.Reporting — print summaries to DBMS_OUTPUT.
 
 
